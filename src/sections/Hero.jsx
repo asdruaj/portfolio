@@ -33,12 +33,11 @@ const Hero = () => {
 }
 
 function Rig () {
-  return useFrame((state, delta) => {
+  return useFrame((state) => {
     easing.damp3(
       state.camera.position,
-      [state.pointer.x / 8, 1 + state.pointer.y / 8, 3],
-      0.5,
-      delta
+      [state.pointer.x / 10, 1 + state.pointer.y / 10, 3],
+      0.5
     )
   })
 }
