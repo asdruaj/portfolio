@@ -55,7 +55,7 @@ export const FlipWords = ({
           position: 'absolute',
         }}
         className={twMerge(
-          'z-10 inline-block relative text-left',
+          'z-10 inline-block relative',
           className
         )}
         key={currentWord}
@@ -86,7 +86,6 @@ export const FlipWords = ({
                 {letter}
               </motion.span>
             ))}
-            <span className='inline-block'>&nbsp;</span>
           </motion.span>
         ))}
       </motion.div>
