@@ -2,11 +2,11 @@ import React, { Suspense } from 'react'
 import HeroText from '../components/HeroText'
 import ParallaxBackground from '../components/ParallaxBackground'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Astronaut } from '../components/Astronaut'
 import { useMediaQuery } from 'react-responsive'
 import { Float } from '@react-three/drei'
 import { easing } from 'maath'
 import Loader from '../components/Loader'
+import { Spaceship } from '../components/Spaceship'
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 })
@@ -17,11 +17,12 @@ const Hero = () => {
       <ParallaxBackground />
       <figure className='absolute inset-0' style={{ width: '100vw', height: '100vh' }}>
 
-        <Canvas camera={{ position: [0, 1, 3] }}>
+        <Canvas camera={{ position: [1, 2, 3] }}>
+          <ambientLight intensity={9} />
           <Suspense fallback={<Loader />}>
 
             <Float>
-              <Astronaut scale={isMobile && 0.23} position={isMobile && [0, -1.5, 0]} />
+              <Spaceship scale={isMobile && 0.0006} position={isMobile && [-0.8, 10, 0]} />
             </Float>
           </Suspense>
           <Rig />
@@ -33,11 +34,12 @@ const Hero = () => {
 }
 
 function Rig () {
-  return useFrame((state) => {
+  return useFrame((state, delta) => {
     easing.damp3(
       state.camera.position,
-      [state.pointer.x / 10, 1 + state.pointer.y / 10, 3],
-      0.5
+      [state.pointer.x / 5, 1 + state.pointer.y / 5, 3],
+      0.5,
+      delta
     )
   })
 }

@@ -3,14 +3,13 @@ import { motion } from 'motion/react'
 
 const HeroText = () => {
   const words = ['Secure', 'Modern', 'Scalable']
-
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 }
   }
 
   return (
-    <div className='z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text'>
+    <div className='z-10 mt-20 text-center md:mt-40 md:text-left h-full bg-clip-text '>
       {/* DeskptopView */}
 
       <div className='flex-col hidden md:flex c-space space-y-4'>
