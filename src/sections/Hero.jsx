@@ -1,9 +1,8 @@
-import React, { Suspense } from 'react'
+import { Suspense } from 'react'
 import HeroText from '../components/HeroText'
 import ParallaxBackground from '../components/ParallaxBackground'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useMediaQuery } from 'react-responsive'
-import { Float } from '@react-three/drei'
 import { easing } from 'maath'
 import Loader from '../components/Loader'
 import { Spaceship } from '../components/Spaceship'
@@ -17,13 +16,12 @@ const Hero = () => {
       <ParallaxBackground />
       <figure className='absolute inset-0' style={{ width: '100vw', height: '100vh' }}>
 
-        <Canvas camera={{ position: [1, 2, 3] }}>
+        <Canvas camera={{ position: isMobile ? [0.35, 0.5, 3] : [0.3, 0.8, 2] }}>
           <ambientLight intensity={9} />
           <Suspense fallback={<Loader />}>
 
-            <Float>
-              <Spaceship scale={isMobile && 0.0006} position={isMobile && [-0.8, 10, 0]} />
-            </Float>
+            <Spaceship scale={isMobile && 0.00042} position={isMobile && [-0.75, 10, 0]} />
+
           </Suspense>
           <Rig />
         </Canvas>
@@ -37,7 +35,7 @@ function Rig () {
   return useFrame((state, delta) => {
     easing.damp3(
       state.camera.position,
-      [state.pointer.x / 5, 1 + state.pointer.y / 5, 3],
+      [state.pointer.x / 10, state.pointer.y / 10, 3],
       0.5,
       delta
     )
