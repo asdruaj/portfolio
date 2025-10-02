@@ -70,7 +70,7 @@ const HeroText = () => {
           initial='hidden'
           animate='visible'
           transition={{ delay: 1.2 }}
-        >Building
+        >A guy that Builds
         </motion.p>
 
         <motion.div
