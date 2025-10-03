@@ -20,7 +20,7 @@ export function OrbitingCircles ({
         <svg
           xmlns='http://www.w3.org/2000/svg'
           version='1.1'
-          className='pointer-events-none absolute inset-0 size-full'
+          className='pointer-events-none absolute inset-0 size-full '
         >
           <circle
             className='stroke-black/10 stroke-1 dark:stroke-white/10'
@@ -44,7 +44,7 @@ export function OrbitingCircles ({
               }
             }
             className={twMerge(
-              `animate-orbit absolute flex size-[var(--icon-size)] transform-gpu items-center justify-center rounded-full ${reverse ? '[animation-direction:reverse]' : ''}`,
+              `animate-orbit absolute flex size-[var(--icon-size)] transform-gpu items-center justify-center rounded-full  ${reverse ? '[animation-direction:reverse]' : ''}`,
 
               className
             )}

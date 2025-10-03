@@ -32,6 +32,6 @@ export function Frameworks () {
   )
 }
 
-const Icon = ({ src }) => (
-  <img src={src} alt='Framework Icon' className='rounded-sm hover:scale-110 duration-200 select-none' />
+const Icon = ({ src, }) => (
+  <img src={src} alt='Framework Icon' className='rounded-sm hover:scale-110 duration-200 selec-none' draggable={false} />
 )
