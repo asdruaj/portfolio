@@ -23,13 +23,13 @@ const HeroText = () => {
         </motion.h1>
         <div className='flex flex-col items-start space-y-4'>
           <motion.p
-            className='text-5xl font-medium text-neutral-300'
+            className='text-4xl font-medium text-neutral-300'
             variants={variants}
             initial='hidden'
             animate='visible'
             transition={{ delay: 1.2 }}
           >
-            A Developer <br /> Dedicated to Crafting
+            An aspiring developer <br /> eager to learn and build.
           </motion.p>
 
           <motion.div
