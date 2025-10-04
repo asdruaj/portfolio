@@ -1,29 +1,33 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 
-const Navigation = () => {
+const Navigation = ({ onClose }) => {
   return (
     <ul className='nav-ul'>
       <li className='nav-li'>
-        <a href='#home' className='nav-link'>Home</a>
+        <a href='#home' className='nav-link' onClick={onClose}>Home</a>
       </li>
 
       <li className='nav-li'>
-        <a href='#about-me' className='nav-link'>About</a>
+        <a href='#about-me' className='nav-link' onClick={onClose}>About</a>
       </li>
 
       <li className='nav-li'>
-        <a href='#work' className='nav-link'>Work</a>
+        <a href='#work' className='nav-link' onClick={onClose}>Work</a>
       </li>
 
       <li className='nav-li'>
-        <a href='#contact' className='nav-link'>Contact</a>
+        <a href='#contact' className='nav-link' onClick={onClose}>Contact</a>
       </li>
     </ul>
   )
 }
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const onClose = () => {
+    setIsOpen(false)
+  }
 
   return (
     <div className='fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40'>
@@ -53,11 +57,10 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             style={{ maxHeight: '100dvh' }}
             transition={{ duration: 1 }}
-            exit={{ opacity: 0, x: 10 }}
 
           >
             <nav className='pb-5'>
-              <Navigation />
+              <Navigation onClose={onClose} />
             </nav>
           </motion.div>}
       </AnimatePresence>

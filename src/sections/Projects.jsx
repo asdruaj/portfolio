@@ -2,8 +2,11 @@ import { useState } from 'react'
 import Project from '../components/Project'
 import { myProjects } from '../constants/index'
 import { motion, useMotionValue, useSpring } from 'motion/react'
+import { useMediaQuery } from 'react-responsive'
 
 const Projects = () => {
+  const isMobile = useMediaQuery({ maxWidth: 853 })
+
   const x = useMotionValue(0)
   const y = useMotionValue(0)
 
@@ -29,7 +32,7 @@ const Projects = () => {
 
       }
       {
-        preview &&
+        preview && !isMobile &&
           <motion.img
             className='fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80'
             style={{ x: springX, y: springY }}
