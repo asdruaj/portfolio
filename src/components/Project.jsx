@@ -4,6 +4,10 @@ import { AnimatePresence } from 'motion/react'
 
 const Project = ({ title, description, subDescription, href, image, tags, setPreview }) => {
   const [isHidden, setIsHidden] = useState(true)
+  const handleOpen = () => {
+    setIsHidden(false)
+    setPreview(null)
+  }
 
   return (
     <>
@@ -23,7 +27,7 @@ const Project = ({ title, description, subDescription, href, image, tags, setPre
           </div>
 
         </div>
-        <button onClick={() => setIsHidden(false)} className='flex items-center gap-1 cursor-pointer hover-animation'>
+        <button onClick={handleOpen} className='flex items-center gap-1 cursor-pointer hover-animation'>
           Read More
           <img src='assets/arrow-right.svg' className='w-5' alt='something' />
         </button>

@@ -9,7 +9,7 @@ const HeroText = () => {
   }
 
   return (
-    <div className='z-10 mt-20 text-center md:mt-40 md:text-left h-full bg-clip-text '>
+    <div className='z-10 mt-20 text-center md:mt-40 md:text-left h-full bg-clip-text'>
       {/* DeskptopView */}
 
       <div className='flex-col hidden md:flex c-space space-y-4'>
@@ -54,7 +54,7 @@ const HeroText = () => {
 
       {/* MobileView */}
 
-      <div className='flex flex-col space-y-4 md:hidden text-center'>
+      <div className='flex flex-col space-y-4 md:hidden text-center relative'>
         <motion.h1
           className='text-4xl font-medium'
           variants={variants}
