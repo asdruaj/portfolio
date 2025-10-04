@@ -225,18 +225,18 @@ export const myProjects = [
 
 export const mySocials = [
   {
-    name: 'Instagram',
-    href: '',
-    icon: '/assets/socials/whatsApp.svg',
+    name: 'Github',
+    href: 'https://github.com/asdruaj?tab=repositories',
+    icon: '/assets/logos/light-github.svg',
   },
   {
     name: 'Linkedin',
-    href: 'https://www.linkedin.com/in/ali-sanati/',
+    href: 'https://www.linkedin.com/in/asdrubal-aldana-40a53b255/',
     icon: '/assets/socials/linkedIn.svg',
   },
   {
-    name: 'Github',
-    href: 'https://www.instagram.com/ali.sanatidev/reels/',
+    name: 'Instagram',
+    href: 'https://www.instagram.com/asdrubaaljr/?hl=es',
     icon: '/assets/socials/instagram.svg',
   },
 ]
