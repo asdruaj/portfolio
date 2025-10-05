@@ -18,7 +18,7 @@ const Alert = ({ type, message }) => {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
       >
         <div className={`p-2 ${type === 'danger' ? 'bg-red-500' : 'bg-royal'} items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex rounded-md p-5`}>
-          <p className={`flex, rounded-full ${type === 'danger' ? 'bg-red-500' : 'bg-lavender'} uppercase px-2 py-1 text-xs font-semibold mr-3`}>{type === 'danger' ? 'Oops!' : 'Success!'}</p>
+          <p className={`flex, rounded-full ${type === 'danger' ? 'bg-red-500' : 'bg-lavender'} uppercase px-2 py-1 text-xs font-semibold mr-3`}>{type === 'danger' ? 'Oops!' : 'Hey!'}</p>
           <p className='mr-2 text-left'>{message}</p>
         </div>
       </motion.div>
