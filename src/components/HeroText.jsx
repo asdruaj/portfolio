@@ -1,3 +1,4 @@
+import { mySocials } from '../constants'
 import { FlipWords } from './FlipWords'
 import { motion } from 'motion/react'
 
@@ -92,6 +93,19 @@ const HeroText = () => {
           Web Experiences
         </motion.p>
       </div>
+      <motion.div
+        className='flex justify-center mt-2 md:justify-start md:ml-14 md:mt-12 md:gap-4'
+        variants={variants}
+        initial='hidden'
+        animate='visible'
+        transition={{ delay: 2 }}
+      >
+        {mySocials.map((social, index) => (
+          <a target='_blank' rel='noopener noreferrer' href={social.href} key={index} className='p-2 hover-animation'>
+            <img src={social.icon} className='w-5 h-5 md:w-8 md:h-8 ' alt={social.name} />
+          </a>
+        ))}
+      </motion.div>
 
     </div>
   )

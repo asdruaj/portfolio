@@ -11,12 +11,13 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 })
 
   return (
-    <section className='flex items-start justify-center md:justify-start min-h-screen overflow-hidden c-space md:items-start ' id='home'>
+    <section className='flex items-start justify-center md:justify-start min-h-screen overflow-hidden c-space md:items-start' id='home'>
       <HeroText />
+
       <ParallaxBackground />
       <figure className='absolute inset-0' style={{ width: '100vw', height: '100vh' }}>
 
-        <Canvas camera={{ position: isMobile ? [0.35, 0.5, 3] : [0.3, 0.8, 2] }}>
+        <Canvas camera={{ position: isMobile ? [0.35, -0.1, 3] : [0.3, 0.8, 2] }}>
           <ambientLight intensity={9} />
           <Suspense fallback={<Loader />}>
 
