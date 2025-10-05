@@ -28,7 +28,7 @@ const About = () => {
         <div className='grid-default-color grid-2'>
           <div className=' flex items-center justify-center w-full h-full' ref={secondGridContainer}>
             <p className=' flex items-end text-5xl text-gray-500 select-none'>
-              WHAT DO I KNOW?
+              DRAG ME
             </p>
             <Card style={{ rotate: '75deg', top: '30%', left: '20%' }} text='Azure' containerRef={secondGridContainer} />
             <Card style={{ rotate: '-45deg', top: '50%', left: '55%' }} text='Agile' containerRef={secondGridContainer} />
