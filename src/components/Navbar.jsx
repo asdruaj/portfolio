@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className='mx-auto c-space max-w-7xl'>
         <div className='flex items-center justify-between py-2 sm:py-0'>
 
-          <a href='#home' className='text-xl font-bold transition-colors text-neutral-400 hover:text-white'>Aldash.dev</a>
+          <a href='#home' className='text-xl font-bold transition-colors text-neutral-400 hover:text-white'>{'<Aldash.dev />'}</a>
 
           <button onClick={() => setIsOpen(!isOpen)} className='flex cursor-pointer sm:hidden text-neutral-400 hover:text-white focus:outline-none '>
             <img src={isOpen ? 'assets/close.svg' : 'assets/menu.svg'} className='w-6 h-6' alt='' />
