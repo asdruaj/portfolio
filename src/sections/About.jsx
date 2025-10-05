@@ -30,9 +30,9 @@ const About = () => {
             <p className=' flex items-end text-5xl text-gray-500 select-none'>
               DRAG ME
             </p>
-            <Card style={{ rotate: '75deg', top: '30%', left: '20%' }} text='Azure' containerRef={secondGridContainer} />
-            <Card style={{ rotate: '-45deg', top: '50%', left: '55%' }} text='Agile' containerRef={secondGridContainer} />
-            <Card style={{ rotate: '-55deg', top: '40%', left: '-2%' }} text='FP' containerRef={secondGridContainer} />
+            <Card style={{ rotate: '30deg', top: '65%', left: '20%' }} text='Azure' containerRef={secondGridContainer} />
+            <Card style={{ rotate: '-45deg', top: '65%', left: '50%' }} text='Agile' containerRef={secondGridContainer} />
+            <Card style={{ rotate: '-55deg', top: '30%', left: '2%' }} text='FP' containerRef={secondGridContainer} />
             <Card style={{ rotate: '90deg', top: '40%', left: '75%' }} text='Front-End' containerRef={secondGridContainer} />
             <Card style={{ rotate: '10deg', top: '10%', left: '42%' }} text='API Rest' containerRef={secondGridContainer} />
           </div>
