@@ -65,6 +65,11 @@ body {
   @apply sm:px-10 px-5 lg:px-15;
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .hover-animation {
   @apply hover:-translate-y-1 duration-200;
 }

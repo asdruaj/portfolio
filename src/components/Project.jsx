@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ProjectDetails from './ProjectDetails'
 import { AnimatePresence } from 'motion/react'
 
@@ -8,6 +8,18 @@ const Project = ({ title, description, subDescription, href, image, tags, setPre
     setIsHidden(false)
     setPreview(null)
   }
+  useEffect(() => {
+    if (!isHidden) {
+      document.body.style.overflow = 'hidden' // Disable scrolling
+    } else {
+      document.body.style.overflow = 'unset' // Re-enable scrolling
+    }
+
+    // Cleanup function to ensure scrolling is re-enabled when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isHidden]) // Re-run effect when isOpen changes
 
   return (
     <>
