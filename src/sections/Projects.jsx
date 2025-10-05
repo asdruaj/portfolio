@@ -21,7 +21,7 @@ const Projects = () => {
   const [preview, setPreview] = useState(null)
 
   return (
-    <section onMouseMove={handleMouseMove} className='relative c-space mt-20 md:mt:30'>
+    <section onMouseMove={handleMouseMove} className='relative c-space mt-20 md:mt:30' id='work'>
       <h2 className='text-heading'>Some Projects</h2>
       <div className='bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full' />
 
