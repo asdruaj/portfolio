@@ -52,9 +52,10 @@ export const Timeline = ({
             </div>
 
             <div className='relative pl-20 pr-4 md:pl-4 w-full'>
-              <div className='block md:hidden mb-4 text-2xl font-bold text-neutral-300'>
-                <h3>{item.location}</h3>
-                <h3>{item.date}</h3>
+              <div className='block mb-4 md:hidden text-2xl font-bold text-neutral-300'>
+                <h3 className='text-xl text-white'>{item.title}</h3>
+                <h3 className='text-xl text-neutral-400'>{item.location}</h3>
+                <h3 className='text-xl text-neutral-400'> {item.date}</h3>
               </div>
               {item.contents.map((content, i) => (
                 <p className=' mb-3 font-normal text-neutral-400' key={i}>{content}</p>
