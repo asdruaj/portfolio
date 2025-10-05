@@ -53,7 +53,7 @@ export const myProjects = [
       'The capstone project for the Meta Front-End Developer certification, focusing on building a dynamic and responsive website with a fully functional table reservation system.',
     subDescription: [
       'Developed a single-page application (SPA) using React to create a dynamic and modern user interface.',
-      'Implemented robust **form state management and validation** for the reservation system, ensuring data integrity.',
+      'Implemented robust form state management and validation for the reservation system, ensuring data integrity.',
       'Designed and coded a fully responsive layout using CSS/HTML to provide an excellent experience across all devices.',
       'Integrated mock API logic to dynamically manage available booking times based on the selected date.',
     ],
