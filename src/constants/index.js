@@ -9,6 +9,7 @@ export const myProjects = [
       'Implemented secure user roles and authentication for HR personnel using Node.js/Express and integrated MongoDB for flexible data storage.',
       'Developed a responsive, modern interface with React and Tailwind CSS, significantly improving HR productivity.',
       'Utilized Redux Toolkit (RTK) for centralized state management to handle complex payroll and attendance workflows.',
+      'email: admin@admin || password: admin'
     ],
     href: 'https://hrapp-client.onrender.com/login',
     logo: '',
