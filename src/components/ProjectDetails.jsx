@@ -36,7 +36,7 @@ const ProjectDetails = ({
                 <img className='rounded-lg size-10 hover-animation w-8 h-8 md:w-12 md:h-12 ' key={tag.id} src={tag.path} alt={tag.name} />
               ))}
             </div>
-            <a className='inline-flex items-center gap-4 font-medium hover-animation cursor-pointer hover-animation mr-4 text-sm md:text-base' href={href}>
+            <a className='inline-flex items-center gap-4 font-medium hover-animation cursor-pointer hover-animation mr-4 text-sm md:text-base' target='_blank' rel='noreferrer noopener' href={href}>
               View Project
               <img className='w-6 h-6' src='assets/arrow-up.svg' alt='View Project Icon' />
             </a>
