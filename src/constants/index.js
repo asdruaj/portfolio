@@ -57,7 +57,7 @@ export const myProjects = [
       'Designed and coded a fully responsive layout using CSS/HTML to provide an excellent experience across all devices.',
       'Integrated mock API logic to dynamically manage available booking times based on the selected date.',
     ],
-    href: '',
+    href: 'https://little-lemon-webapp.onrender.com/',
     logo: '',
     image: '/assets/projects/little-lemon.png',
     tags: [
