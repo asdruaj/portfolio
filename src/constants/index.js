@@ -10,7 +10,7 @@ export const myProjects = [
       'Developed a responsive, modern interface with React and Tailwind CSS, significantly improving HR productivity.',
       'Utilized Redux Toolkit (RTK) for centralized state management to handle complex payroll and attendance workflows.',
     ],
-    href: '',
+    href: 'https://hrapp-client.onrender.com/login',
     logo: '',
     image: '/assets/projects/hrApp.png',
     tags: [
