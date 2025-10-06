@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import ProjectDetails from './ProjectDetails'
 import { AnimatePresence } from 'motion/react'
 
-const Project = ({ title, description, subDescription, href, image, tags, setPreview }) => {
+const Project = ({ title, description, subDescription, href, image, tags, setPreview, id }) => {
   const [isHidden, setIsHidden] = useState(true)
   const handleOpen = () => {
     setIsHidden(false)
@@ -49,7 +49,7 @@ const Project = ({ title, description, subDescription, href, image, tags, setPre
 
         {
         !isHidden &&
-          <ProjectDetails title={title} description={description} subDescription={subDescription} image={image} tags={tags} href={href} closeModal={() => setIsHidden(true)} />
+          <ProjectDetails title={title} description={description} subDescription={subDescription} image={image} tags={tags} href={href} id={id} closeModal={() => setIsHidden(true)} />
       }
 
       </AnimatePresence>
