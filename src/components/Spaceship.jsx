@@ -27,7 +27,7 @@ export function Spaceship (props) {
 
   return (
     <group
-      ref={group} {...props} dispose={null} rotation={[-Math.PI / 0.29, -0.2, 2.2]} scale={props.scale || 0.0016} position={props.position || [1, 100, -2]}
+      ref={group} {...props} dispose={null} rotation={[-Math.PI / 0.292, -0.15, 2]} scale={props.scale || 0.0016} position={props.position || [0.05, 100, -2.5]}
     >
       <group name='Sketchfab_Scene'>
         <group name='Sketchfab_model' rotation={[-Math.PI / 2, 0, 0]}>

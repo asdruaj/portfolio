@@ -8,7 +8,7 @@ import Loader from '../components/Loader'
 import { Spaceship } from '../components/Spaceship'
 
 const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 853 })
+  const isMobile = useMediaQuery({ maxWidth: 912 })
 
   return (
     <section className='flex items-start justify-center md:justify-start min-h-screen overflow-hidden c-space md:items-start' id='home'>
@@ -17,11 +17,11 @@ const Hero = () => {
       <ParallaxBackground />
       <figure className='absolute inset-0' style={{ width: '100%', height: '100vh' }}>
 
-        <Canvas camera={{ position: isMobile ? [0.35, -0.1, 3] : [0.3, 0.8, 2] }}>
+        <Canvas camera={{ position: isMobile ? [-0.2, -0.5, 3] : [1, 0.8, 2] }}>
           <ambientLight intensity={9} />
           <Suspense fallback={<Loader />}>
 
-            <Spaceship scale={isMobile && 0.00042} position={isMobile && [-0.75, 10, 0]} />
+            <Spaceship scale={isMobile && 0.00045} position={isMobile && [0, 0, 0]} />
 
           </Suspense>
           <Rig />

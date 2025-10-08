@@ -10,10 +10,10 @@ const HeroText = () => {
   }
 
   return (
-    <div className='z-10 mt-20 text-center md:mt-40 md:text-left h-full bg-clip-text'>
+    <div className='z-10 mt-20 text-center md:mt-40 lg:text-left h-full bg-clip-text w-screen relative'>
       {/* DeskptopView */}
 
-      <div className='flex-col hidden md:flex c-space space-y-4'>
+      <div className='flex-col hidden lg:flex c-space space-y-4'>
         <motion.h1
           className='text-4xl font-medium'
           variants={variants}
@@ -55,7 +55,7 @@ const HeroText = () => {
 
       {/* MobileView */}
 
-      <div className='flex flex-col space-y-4 md:hidden text-center relative'>
+      <div className='block w-fit space-y-4 lg:hidden text-center mx-auto'>
         <motion.h1
           className='text-4xl font-medium'
           variants={variants}
@@ -94,7 +94,7 @@ const HeroText = () => {
         </motion.p>
       </div>
       <motion.div
-        className='flex justify-center mt-2 md:justify-start md:ml-14 md:mt-12 md:gap-4'
+        className='flex justify-center mt-2 lg:justify-start lg:ml-14 md:mt-12 md:gap-4'
         variants={variants}
         initial='hidden'
         animate='visible'
