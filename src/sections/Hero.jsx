@@ -21,7 +21,7 @@ const Hero = () => {
           <ambientLight intensity={9} />
           <Suspense fallback={<Loader />}>
 
-            <Spaceship scale={isMobile && 0.00045} position={isMobile && [0, 0, 0]} />
+            <Spaceship scale={isMobile && 0.00045} position={isMobile && [0, -0.3, 0]} />
 
           </Suspense>
           <Rig />
