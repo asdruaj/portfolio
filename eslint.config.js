@@ -1,3 +1,3 @@
-import neostandard, { plugins } from 'neostandard'
+import neostandard from 'neostandard'
 
 export default neostandard({})
