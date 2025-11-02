@@ -1,6 +1,36 @@
 export const myProjects = [
   {
     id: 1,
+    title: 'Wordle Clone',
+    description:
+        'A web application that allows users to customize a 3D shirt model in real-time, leveraging the power of Three.js for 3D rendering and the DALL-E API (OpenAI) for AI-driven texture generation.',
+    subDescription: [
+      'Developed an interactive 3D environment using Three.js and React to render and customize a virtual shirt model.',
+      'Integrated the OpenAI DALL-E API via an Express backend to generate unique, AI-powered decals and full textures based on user text prompts.',
+      'Implemented a React frontend with Tailwind CSS and Framer Motion for a smooth, modern, and animated user interface.',
+      'Enabled real-time color changes, texture application (uploading files), and decal placement, with state management handled by Valtio for instant synchronization.',
+      'Engineered a Node.js/Express backend route to handle API requests and safely transmit Base64 image data back to the client.',
+    ],
+    href: 'https://threed-shirt-project-vsok.onrender.com/',
+    logo: '',
+    image: '/assets/projects/threejs-shirt.png',
+    tags: [
+
+      {
+        id: 2,
+        name: 'React',
+        path: '/assets/logos/react.svg',
+      },
+      {
+        id: 3,
+        name: 'TailwindCSS',
+        path: '/assets/logos/tailwindcss.svg',
+      },
+
+    ],
+  },
+  {
+    id: 2,
     title: '3D Shirt Model Website',
     description:
         'A web application that allows users to customize a 3D shirt model in real-time, leveraging the power of Three.js for 3D rendering and the DALL-E API (OpenAI) for AI-driven texture generation.',
@@ -44,7 +74,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     title: 'MarOil HRMS',
     description:
       'A comprehensive internal application designed to streamline HR operations, including employee records management, payroll processing, and time-off tracking for a mid-sized corporation.',
@@ -92,7 +122,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     title: 'Little Lemon Website',
     description:
       'The capstone project for the Meta Front-End Developer certification, focusing on building a dynamic and responsive website with a fully functional table reservation system.',
@@ -125,7 +155,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: 'This Portfolio',
     description:
       'The very portfolio you are viewing, built as a modern, high-performance Single Page Application (SPA) with a focus on interactive 3D elements.',
