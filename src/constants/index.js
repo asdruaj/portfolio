@@ -6,11 +6,12 @@ export const myProjects = [
     'A web-based implementation of the popular Wordle game, allowing users to guess a hidden five-letter word in six attempts. It features real-time feedback on letter accuracy and position.',
     subDescription: [
       'Developed core game logic and UI components using React to manage the user’s guesses and keyboard input.',
-      'Implemented a custom hook (`useWordle`) to manage complex game state, including turns, guess history, and letter status (correct, present, or absent).',
-      'Integrated global keyboard event listeners to handle typing and submission across the entire application interface.',
-      'Styled the responsive user interface and game board using **Tailwind CSS** for rapid and utility-first development.',
+      'Implemented a custom hook  to manage complex game state, including turns, guess history, and letter status.',
+
+      'Styled the responsive user interface and game board using Tailwind CSS for rapid and utility-first development.',
       'Handled asynchronous data fetching to retrieve the secret word solution upon component initialization.',],
     href: 'https://wordle-clone-5c51.vercel.app/',
+    repo: 'https://github.com/asdruaj/wordle-clone',
     logo: '',
     image: '/assets/projects/wordle.png',
     tags: [
@@ -38,9 +39,9 @@ export const myProjects = [
       'Integrated the OpenAI DALL-E API via an Express backend to generate unique, AI-powered decals and full textures based on user text prompts.',
       'Implemented a React frontend with Tailwind CSS and Framer Motion for a smooth, modern, and animated user interface.',
       'Enabled real-time color changes, texture application (uploading files), and decal placement, with state management handled by Valtio for instant synchronization.',
-      'Engineered a Node.js/Express backend route to handle API requests and safely transmit Base64 image data back to the client.',
     ],
     href: 'https://threed-shirt-project-vsok.onrender.com/',
+    repo: 'https://github.com/asdruaj/3d-shirt-project',
     logo: '',
     image: '/assets/projects/threejs-shirt.png',
     tags: [
@@ -81,10 +82,11 @@ export const myProjects = [
       'Engineered a scalable MERN stack application (MongoDB, Express, React, NodeJS) to efficiently manage complex employee data.',
       'Implemented secure user roles and authentication for HR personnel using Node.js/Express and integrated MongoDB for flexible data storage.',
       'Developed a responsive, modern interface with React and Tailwind CSS, significantly improving HR productivity.',
-      'Utilized Redux Toolkit (RTK) for centralized state management to handle complex payroll and attendance workflows.',
+      'Utilized Redux Toolkit (RTK) for centralized state management.',
       'email: admin@admin || password: admin'
     ],
     href: 'https://hrapp-client.onrender.com/login',
+    repo: 'https://github.com/asdruaj/HrApp',
     logo: '',
     image: '/assets/projects/hrApp.png',
     tags: [
@@ -132,6 +134,7 @@ export const myProjects = [
       'Integrated mock API logic to dynamically manage available booking times based on the selected date.',
     ],
     href: 'https://little-lemon-webapp.onrender.com/',
+    repo: 'https://github.com/asdruaj/little-lemon-webapp',
     logo: '',
     image: '/assets/projects/little-lemon.png',
     tags: [
@@ -166,6 +169,7 @@ export const myProjects = [
     ],
     href: '',
     logo: '',
+    repo: 'https://github.com/asdruaj/portfolio',
     image: '/assets/projects/portfolio.png',
     tags: [
       {

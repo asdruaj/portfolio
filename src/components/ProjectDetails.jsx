@@ -8,6 +8,7 @@ const ProjectDetails = ({
   image,
   tags,
   href,
+  repo,
   closeModal
 }) => {
   return (
@@ -23,7 +24,10 @@ const ProjectDetails = ({
         </button>
         <img src={image} alt={title} className='w-full rounded-t-2xl' />
         <div className='p-5'>
-          <h5 className='mb-2 text-2xl font-bold text-white'>{title}</h5>
+          <div className='flex justify-between'>
+            <h5 className='mb-2 text-2xl font-bold text-white'>{title}</h5>
+
+          </div>
           <p className='mb-3 font-normal text-neutral-400'>{description}</p>
           {
             subDescription.map((subDesc, i) => (
@@ -38,13 +42,18 @@ const ProjectDetails = ({
               ))}
             </div>
 
-            {
-              id !== 3 &&
-                <a className='inline-flex items-center gap-4 font-medium hover-animation cursor-pointer hover-animation mr-4 text-sm md:text-base' target='_blank' rel='noreferrer noopener' href={href}>
-                  View Project
+            <div className='flex gap-4 '>
+              <a href={repo} target='_blank' rel='noopener noreferrer' className='mb-0.5'>
+                <img src='assets/logos/github-purple.png' alt='repository' className='w-7 h-7  hover-animation' />
+              </a>
+
+              {id !== 5 &&
+                <a className='inline-flex items-center gap-4 font-medium hover-animation cursor-pointer' target='_blank' rel='noreferrer noopener' href={href}>
+
                   <img className='w-6 h-6' src='assets/arrow-up.svg' alt='View Project Icon' />
-                </a>
-            }
+                </a>}
+            </div>
+
           </div>
         </div>
       </motion.div>
