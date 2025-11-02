@@ -3,17 +3,16 @@ export const myProjects = [
     id: 1,
     title: 'Wordle Clone',
     description:
-        'A web application that allows users to customize a 3D shirt model in real-time, leveraging the power of Three.js for 3D rendering and the DALL-E API (OpenAI) for AI-driven texture generation.',
+    'A web-based implementation of the popular Wordle game, allowing users to guess a hidden five-letter word in six attempts. It features real-time feedback on letter accuracy and position.',
     subDescription: [
-      'Developed an interactive 3D environment using Three.js and React to render and customize a virtual shirt model.',
-      'Integrated the OpenAI DALL-E API via an Express backend to generate unique, AI-powered decals and full textures based on user text prompts.',
-      'Implemented a React frontend with Tailwind CSS and Framer Motion for a smooth, modern, and animated user interface.',
-      'Enabled real-time color changes, texture application (uploading files), and decal placement, with state management handled by Valtio for instant synchronization.',
-      'Engineered a Node.js/Express backend route to handle API requests and safely transmit Base64 image data back to the client.',
-    ],
-    href: 'https://threed-shirt-project-vsok.onrender.com/',
+      'Developed core game logic and UI components using React to manage the user’s guesses and keyboard input.',
+      'Implemented a custom hook (`useWordle`) to manage complex game state, including turns, guess history, and letter status (correct, present, or absent).',
+      'Integrated global keyboard event listeners to handle typing and submission across the entire application interface.',
+      'Styled the responsive user interface and game board using **Tailwind CSS** for rapid and utility-first development.',
+      'Handled asynchronous data fetching to retrieve the secret word solution upon component initialization.',],
+    href: 'https://wordle-clone-5c51.vercel.app/',
     logo: '',
-    image: '/assets/projects/threejs-shirt.png',
+    image: '/assets/projects/wordle.png',
     tags: [
 
       {
