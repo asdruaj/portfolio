@@ -15,11 +15,11 @@ export function Spaceship (props) {
   useEffect(() => {
     if (!group.current) return
     group.current.position.set(
-      position?.[0] ?? 1.2,
+      position?.[0] ?? 0.5,
       10, // start off-screen
       position?.[2] ?? -2.5
     )
-    group.current.scale.setScalar(scale || 0.0018)
+    group.current.scale.setScalar(scale || 0.00165)
   }, [])
 
   useFrame((state, delta) => {
