@@ -17,11 +17,11 @@ const Hero = () => {
       <ParallaxBackground />
       <figure className='absolute inset-0' style={{ width: '100%', height: '100vh' }}>
 
-        <Canvas camera={{ position: isMobile ? [-0.2, -0.5, 3] : [1, 0.8, 2] }}>
+        <Canvas camera={{ position: isMobile ? [-0.2, -0.5, 3] : [1, 0.8, 3] }}>
           <ambientLight intensity={9} />
           <Suspense fallback={<Loader />}>
 
-            <Spaceship scale={isMobile && 0.00045} position={isMobile && [0, -0.3, 0]} />
+            <Spaceship scale={isMobile ? 0.00045 : undefined} position={isMobile ? [0, -0.3, 0] : undefined} />
 
           </Suspense>
           <Rig />
@@ -36,7 +36,11 @@ function Rig () {
   return useFrame((state, delta) => {
     easing.damp3(
       state.camera.position,
-      [state.pointer.x / 10, state.pointer.y / 10, 3],
+      [
+        Math.abs(state.pointer.x) > 0.01 ? state.pointer.x / 10 : 0,
+        Math.abs(state.pointer.y) > 0.01 ? state.pointer.y / 10 : 0,
+        3
+      ],
       0.5,
       delta
     )

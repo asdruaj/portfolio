@@ -1,36 +1,59 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import { useMotionValue, useSpring } from 'motion/react'
 import { useFrame } from '@react-three/fiber'
+import { easing } from 'maath'
 
 export function Spaceship (props) {
   const group = useRef()
-  const { nodes, animations } = useGLTF('/models/spaceship.glb')
-  const { actions } = useAnimations(animations, group)
+  const { nodes } = useGLTF('/models/spaceship.glb')
+  const arrived = useRef(false)
+  const arrivedAt = useRef(0)
+  const BASE_ROTATION_X = -Math.PI / 0.292
+  const { position, scale, ...rest } = props
+  const targetY = props.position?.[1] ?? -0.2
 
   useEffect(() => {
-    if (animations.length > 0) {
-      actions[animations[0].name]?.play()
+    if (!group.current) return
+    group.current.position.set(
+      position?.[0] ?? 1.2,
+      10, // start off-screen
+      position?.[2] ?? -2.5
+    )
+    group.current.scale.setScalar(scale || 0.0018)
+  }, [])
+
+  useFrame((state, delta) => {
+    if (!group.current) return
+
+    const t = state.clock.elapsedTime
+
+    // Entry animation — damp down from off-screen until close enough
+    if (!arrived.current) {
+      easing.damp(group.current.position, 'y', targetY, 0.4, delta)
+      if (Math.abs(group.current.position.y - targetY) < 0.01) {
+        arrived.current = true
+        arrivedAt.current = t
+      }
+    } else {
+    // Perfectly smooth loop once arrived
+      const elapsed = t - arrivedAt.current
+      group.current.position.y = targetY + Math.sin(elapsed * 0.8) * 0.3
     }
-  }, [actions, animations])
 
-  const yPosition = useMotionValue(10)
-  const ySpring = useSpring(yPosition, { damping: 30 })
-
-  useEffect(() => {
-    ySpring.set(props.position[1] || -1)
-  }, [ySpring])
-
-  useFrame(() => {
-    group.current.position.y = ySpring.get()
+    group.current.rotation.z = Math.sin(t * 0.5) * 0.1
+    group.current.rotation.x = BASE_ROTATION_X + Math.sin(t * 0.4) * 0.05
+    group.current.position.z = (position?.[2] ?? -2.5) + Math.sin(t * 0.4) * 0.05
   })
 
   return (
     <group
-      ref={group} {...props} dispose={null} rotation={[-Math.PI / 0.292, -0.15, 2]} scale={props.scale || 0.0016} position={props.position || [0.05, 0, -2.5]}
+      ref={group}
+      {...rest}  // no position or scale in here anymore
+      dispose={null}
+      rotation={[BASE_ROTATION_X, -0.2, 0]}
     >
       <group name='Sketchfab_Scene'>
-        <group name='Sketchfab_model' rotation={[-Math.PI / 2, 0, 0]}>
+        <group name='Sketchfab_model' rotation={[-Math.PI / 2, -2.1, 0]}>
           <group
             name='696729a048454f61a4438ed9262cac38fbx'
 
