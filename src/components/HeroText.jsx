@@ -3,14 +3,14 @@ import { FlipWords } from './FlipWords'
 import { motion } from 'motion/react'
 
 const HeroText = () => {
-  const words = ['Immersive', 'Modern', 'Engaging']
+  const words = ['Engineer', 'Architect', 'Develop', 'Deploy']
   const variants = {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 }
   }
 
   return (
-    <div className='z-10 mt-20 text-center md:mt-40 lg:text-left h-full bg-clip-text w-screen relative'>
+    <div className='z-10 mt-20 text-center md:mt-52  lg:text-left h-full bg-clip-text w-screen relative'>
       {/* DeskptopView */}
 
       <div className='flex-col hidden lg:flex c-space space-y-4'>
@@ -20,26 +20,16 @@ const HeroText = () => {
           initial='hidden'
           animate='visible'
           transition={{ delay: 1 }}
-        >Hello traveller! <br /><br /> I'm Asdrubal
+        > I'm Asdrubal. I
         </motion.h1>
         <div className='flex flex-col items-start space-y-4'>
-          <motion.p
-            className='text-4xl font-medium text-neutral-300'
-            variants={variants}
-            initial='hidden'
-            animate='visible'
-            transition={{ delay: 1.2 }}
-          >
-            An aspiring developer <br /> eager to learn and build.
-          </motion.p>
-
           <motion.div
             variants={variants}
             initial='hidden'
             animate='visible'
             transition={{ delay: 1.5 }}
           >
-            <FlipWords words={words} className='font-black text-8xl text-white' duration={2000} />
+            <FlipWords words={words} className='font-black text-8xl text-white' />
           </motion.div>
           <motion.p
             className='text-4xl font-medium text-neutral-300'
@@ -48,7 +38,7 @@ const HeroText = () => {
             animate='visible'
             transition={{ delay: 1.8 }}
           >
-            Web Experiences
+            Modern Web & Mobile Products
           </motion.p>
         </div>
       </div>
@@ -62,17 +52,8 @@ const HeroText = () => {
           initial='hidden'
           animate='visible'
           transition={{ delay: 1 }}
-        >Hi I'm Asdrubal
+        >I'm Asdrubal. I
         </motion.h1>
-
-        <motion.p
-          className='text-5xl font-medium text-neutral-300'
-          variants={variants}
-          initial='hidden'
-          animate='visible'
-          transition={{ delay: 1.2 }}
-        >A guy that Builds
-        </motion.p>
 
         <motion.div
           variants={variants}
@@ -90,7 +71,7 @@ const HeroText = () => {
           animate='visible'
           transition={{ delay: 1.8 }}
         >
-          Web Experiences
+          Modern Web & Mobile Products
         </motion.p>
       </div>
       <motion.div

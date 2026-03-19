@@ -56,17 +56,17 @@ export const myProjects = [
         path: '/assets/logos/threejs.png',
       },
       {
-        id: 2,
+        id: 3,
         name: 'React',
         path: '/assets/logos/react.svg',
       },
       {
-        id: 3,
+        id: 4,
         name: 'TailwindCSS',
         path: '/assets/logos/tailwindcss.svg',
       },
       {
-        id: 4,
+        id: 5,
         name: 'Express',
         path: '/assets/logos/express.svg',
       },

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { easing } from 'maath'
 
