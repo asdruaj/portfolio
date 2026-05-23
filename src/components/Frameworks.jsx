@@ -13,7 +13,9 @@ export function Frameworks () {
     'mongodb',
     'azure',
     'html5',
-    'microsoft'
+    'microsoft',
+    'expo',
+    'supabase'
   ]
 
   return (
