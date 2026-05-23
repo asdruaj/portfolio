@@ -42,17 +42,19 @@ const ProjectDetails = ({
               ))}
             </div>
 
-            <div className='flex gap-4 '>
-              <a href={repo} target='_blank' rel='noopener noreferrer' className='mb-0.5'>
-                <img src='assets/logos/github-purple.png' alt='repository' className='w-7 h-7  hover-animation' />
-              </a>
+            {(repo || href) &&
+              <div className='flex gap-4 '>
+                {repo &&
+                  <a href={repo} target='_blank' rel='noopener noreferrer' className='mb-0.5'>
+                    <img src='assets/logos/github-purple.png' alt='repository' className='w-7 h-7  hover-animation' />
+                  </a>}
 
-              {id !== 5 &&
-                <a className='inline-flex items-center gap-4 font-medium hover-animation cursor-pointer' target='_blank' rel='noreferrer noopener' href={href}>
+                {href &&
+                  <a className='inline-flex items-center gap-4 font-medium hover-animation cursor-pointer' target='_blank' rel='noreferrer noopener' href={href}>
 
-                  <img className='w-6 h-6' src='assets/arrow-up.svg' alt='View Project Icon' />
-                </a>}
-            </div>
+                    <img className='w-6 h-6' src='assets/arrow-up.svg' alt='View Project Icon' />
+                  </a>}
+              </div>}
 
           </div>
         </div>

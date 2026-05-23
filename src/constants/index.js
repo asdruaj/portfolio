@@ -1,5 +1,81 @@
 export const myProjects = [
   {
+    id: 6,
+    title: 'Location Diary',
+    description:
+      'A location-based journaling app that lets users log memories and pin them on an interactive map. Built with React Native and Expo for cross-platform mobile, using Supabase as backend and SQLite for offline storage.',
+    subDescription: [
+      'Developed a cross-platform mobile application using React Native and Expo for seamless iOS and Android support.',
+      'Integrated MapView for interactive location pinning and visual journal entry browsing.',
+      'Implemented Supabase for cloud sync and user authentication.',
+      'Used SQLite for local offline-first storage, ensuring entries are available without connectivity.',
+    ],
+    href: '',
+    logo: '',
+    repo: '',
+    image: '/assets/projects/location-diary.jpg',
+    tags: [
+      {
+        id: 1,
+        name: 'React Native',
+        path: '/assets/logos/react.svg',
+      },
+      {
+        id: 2,
+        name: 'Expo',
+        path: '/assets/logos/expo.svg',
+      },
+      {
+        id: 3,
+        name: 'Supabase',
+        path: '/assets/logos/supabase.svg',
+      },
+      {
+        id: 4,
+        name: 'SQLite',
+        path: '/assets/logos/sqlite.svg',
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Habit Tracker',
+    description:
+      'A mobile habit tracking application that helps users build and maintain daily routines. Built with React Native and Expo, powered by Supabase for cloud data and SQLite for reliable offline storage.',
+    subDescription: [
+      'Developed a cross-platform mobile application using React Native and Expo for consistent user experience across devices.',
+      'Designed an intuitive interface for creating, tracking, and visualizing daily habits and streaks.',
+      'Leveraged Supabase for data persistence, user authentication, and cross-device synchronization.',
+      'Used SQLite for offline-first architecture, allowing uninterrupted habit logging without internet access.',
+    ],
+    href: '',
+    logo: '',
+    repo: '',
+    image: '/assets/projects/habit-tracker.jpg',
+    tags: [
+      {
+        id: 1,
+        name: 'React Native',
+        path: '/assets/logos/react.svg',
+      },
+      {
+        id: 2,
+        name: 'Expo',
+        path: '/assets/logos/expo.svg',
+      },
+      {
+        id: 3,
+        name: 'Supabase',
+        path: '/assets/logos/supabase.svg',
+      },
+      {
+        id: 4,
+        name: 'SQLite',
+        path: '/assets/logos/sqlite.svg',
+      },
+    ],
+  },
+  {
     id: 1,
     title: 'Wordle Clone',
     description:
@@ -188,7 +264,7 @@ export const myProjects = [
         path: '/assets/logos/tailwindcss.svg',
       },
     ],
-  }
+  },
 ]
 
 export const mySocials = [

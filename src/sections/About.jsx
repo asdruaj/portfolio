@@ -18,7 +18,7 @@ const About = () => {
           <div className='z-10 md:mb-4'>
             <p className='headtext'>Hi, I'm Asdrubal Aldana</p>
             <p className=' text-neutral-200 text-sm md:text-base text-pretty'>
-              A recently graduated informatics engineer, passionate about web development with exposure to both backend and front end enviroments.
+              An informatics engineer who builds real products — from MERN stack platforms and 3D web experiences to React Native mobile apps. I ship clean, functional code across the stack.
             </p>
             <div className='absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo' />
           </div>
@@ -64,7 +64,7 @@ const About = () => {
         <div className='grid-default-color grid-5'>
           <div className='z-10 w-[50%]'>
             <p className='headtext'>Tech Stack</p>
-            <p className='text-neutral-400 text-[0.7rem]  md:text-base text-pretty'>I'm working hard and getting comfortable with a variety of frameworks, libraries and tools to build reliable, scalable applications. I'm excited by my progress!</p>
+            <p className='text-neutral-400 text-[0.7rem]  md:text-base text-pretty'>I build with React, React Native, Node.js, Three.js, and Tailwind CSS — across web and mobile. Every project is a chance to write clean, scalable code that solves real problems.</p>
           </div>
           <div className='absolute inset-y-0 md:inset-y-9 size-full start-[50%] md:scale-125'>
             <Frameworks />
