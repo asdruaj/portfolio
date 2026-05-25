@@ -44,7 +44,7 @@ export function OrbitingCircles ({
               }
             }
             className={twMerge(
-              `animate-orbit absolute flex size-[var(--icon-size)] items-center justify-center rounded-full  ${reverse ? '[animation-direction:reverse]' : ''}`,
+              `animate-orbit absolute flex size-[var(--icon-size)] items-center justify-center rounded-full backface-hidden  ${reverse ? '[animation-direction:reverse]' : ''}`,
 
               className
             )}
