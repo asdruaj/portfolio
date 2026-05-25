@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { OrbitingCircles } from './OrbitingCircles'
 
 export function Frameworks () {
@@ -26,7 +25,7 @@ export function Frameworks () {
           <Icon key={i} src={`assets/logos/${skill}.svg`} />
         ))}
       </OrbitingCircles>
-      <OrbitingCircles iconSize={25} radius={100} reverse speed={2}>
+      <OrbitingCircles iconSize={25} radius={100} reverse speed={3}>
         {skills.toReversed().map((skill, i) => (
           <Icon key={i} src={`assets/logos/${skill}.svg`} />
         ))}
@@ -35,29 +34,5 @@ export function Frameworks () {
   )
 }
 
-function Icon ({ src }) {
-  const [svg, setSvg] = useState(null)
-
-  useEffect(() => {
-    let cancelled = false
-    setSvg(null)
-    fetch(src)
-      .then(res => res.text())
-      .then(content => {
-        if (!cancelled) setSvg(content)
-      })
-      .catch(() => {})
-    return () => { cancelled = true }
-  }, [src])
-
-  if (!svg) {
-    return <div className='size-full rounded-sm' />
-  }
-
-  return (
-    <div
-      className='[&>svg]:size-full size-full rounded-sm hover:scale-110 duration-200'
-      dangerouslySetInnerHTML={{ __html: svg }}
-    />
-  )
-}
+const Icon = ({ src, }) => (
+  <img src={src} alt='Framework Icon' className='size-full rounded-sm hover:scale-110 duration-200 select-none' draggable={false} />)
